@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=AfK_F5SHtePprJPqwzm4XKe_Q1sl4qq4QA7Cp4trM1YmxVkVHbkD0TW95g4Fm14HUn317ALtoVwMopMhqX4PE3P98qMODq6LctrMZjZO0MEjMTcHgyW82ygG7KjdWMfQgiQmiRuZoSlmZTSEJYIEOOcpoNNDVB9YZpXUy9xYsgICrGiyFmqCrfsqDS08Qk836-LkZYzweOjs8crgY-oHhCcgT0bbCFT5lmoyVQSaU-UGGMFtKojNDqfnaH16MzvJB9ZyhbSOpujbbLvXRsWp8Th_o95vyuiqrlic1ogm7gzzBDxRL252HF-2fcuCwe_ckPqZY_6ShlmUzKjE0sQXGGTuvtrEWtI4e48brylFjnSGTWViuiswxjaeD_A0K_8D40JLLzFFnmdJMt1vodzLOYIDWCcDKCdMEuPPbyCQ-oRzk22gVK6gBW0DuriXwAORrdz6bxVIz6sLlB4A9gB5ILO_UsrMdFNE0qmI-AeZx-CjpPO-2UE54c4UyRPNs1WEoGv-5h5S6h27QME_AaZrNFaxQco1mL6f6jag19pgbTyufWmxI5lSHO3IjOWIkkfWNT545tQVDCo15jZ9sEIFyAy6U9hi5YcWUWuXtu5bcx63eH5pTUS6aTtZL0wWo7EzG_uvrOGpmFCeXPpzPoMF2Jtt0O-DrbU7KCVuSH9n1sJPmT1SWJAQCdRRtYLlzoNEx_1z4wx3sMmre0xPDvC7ulLk3-3-tUpm9E_Jioo0fKFTULEnXsaM_gWUo97ULNhHeWwh2fErDuc90dsC45bDU4hr5c8NoimAgTnPMpmmjSmd0c09LMdPJ3o3vJFYU8CVN3xuf54-SYbGbg-7qW7OwGPHCxhxrz4_OfVUk_taY-MsoW3_4SlJigzuPdwTkAM8XaY4wmWiDmg--TKX0wajGFQ1lsqklQy3ubCSshXIy12Reyi5lBfcqLkIJIcjaeiIy7o2fF6OypA_4AbJ1hqdnwuUSVWA4mzMPhPX7aIYpe18eiFja9IEmrwuJQBUgbXwqqzFM-F9qSEVWq028-S0H_3t7F5lvbLSN_VaEkuOll30gyuDqt7FnjcZZ3rIe2GOpTT0gx4Zlx4vWodDBcKzg-vP74wb-HVouwxIiNSg3_HR-6xQZHsVgWYYUSFwzCb-2oZJVBdJA8Jyyit95e7pT-EQMQFPV6j02IKVEbnNssr1JTbKJVNC8QQISmjtNuyj7k3_IKnoSGT9hyuINHruIk8iROxB6HmIELNrLYHQL6h93dJYIpCN9DD-K1ggV-dik0VmGEmmNC6-rx-fa5jJv7S238YXMDSaecYYwXcEQvWtrLj9D4YxERzSeaGkQRJ3aDNtjZtsm72lsajHqmgcnvvqZOFridlce3RpOEZfBTdcAsDm-Mpn9Xxojeo_NiV5Hkv4WFs3gpIQrDT5UCKNKNTy58q-4pHy_gBiyElwSFetiXrwPVFokxoq4PS7Jyv2jRBiucCAsEdefRl1TWno12FSHnqpcZdLtm6MpltwC7yVD0Q9axBdzT5RsGMj-TTsSWHqGkI0C2xyXyOykGl9tpW9VA5min1N9MWpQGwt_jnjkc1rl_VOqKaok2kSgFOg3_k7bdzuEz0oVdhUxeNgHGg8i-slH6aTjB0Iur7Ua5WfbmwFFCnD9eNFsn2ijFqaSRtnuPHV0vCdp_LvsxmxM6a-2hz3MjyHqCNGNWjWsa38OxJ_DfUgLPhpszHqsbRVoT9tcD5NgjGhdyyNu_k0cOX8IVMBaTDTipiCgcSQJlY" nonce="28c627857a4677f98b69b6715faa1c92" charset="UTF-8"></script><style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            background-color: #222;
+            color: #fff;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #444;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button.operator {
+            background-color: #ff9500;
+        }
+
+        .button.operator:hover {
+            background-color: #ffaa33;
+        }
+
+        .button.equal {
+            background-color: #34c759;
+            grid-column: span 1;
+        }
+
+        .button.equal:hover {
+            background-color: #4cd964;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button" onclick="appendNumber('7')">7</button>
+            <button class="button" onclick="appendNumber('8')">8</button>
+            <button class="button" onclick="appendNumber('9')">9</button>
+            <button class="button operator" onclick="appendOperator('/')">/</button>
+
+            <button class="button" onclick="appendNumber('4')">4</button>
+            <button class="button" onclick="appendNumber('5')">5</button>
+            <button class="button" onclick="appendNumber('6')">6</button>
+            <button class="button operator" onclick="appendOperator('*')">*</button>
+
+            <button class="button" onclick="appendNumber('1')">1</button>
+            <button class="button" onclick="appendNumber('2')">2</button>
+            <button class="button" onclick="appendNumber('3')">3</button>
+            <button class="button operator" onclick="appendOperator('-')">-</button>
+
+            <button class="button" onclick="appendNumber('0')">0</button>
+            <button class="button" onclick="appendNumber('.')">.</button>
+            <button class="button equal" onclick="calculateResult()">=</button>
+            <button class="button operator" onclick="appendOperator('+')">+</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '';
+        let operator = null;
+        let previousInput = '';
+
+        function appendNumber(number) {
+            if (currentInput.includes('.') && number === '.') return;
+            currentInput += number;
+            updateDisplay();
+        }
+
+        function appendOperator(op) {
+            if (currentInput === '') return;
+            if (previousInput !== '') {
+                calculateResult();
+            }
+            operator = op;
+            previousInput = currentInput;
+            currentInput = '';
+        }
+
+        function calculateResult() {
+            if (operator === null || currentInput === '') return;
+            let result;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+
+            switch (operator) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+
+            currentInput = result.toString();
+            operator = null;
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            display.innerText = currentInput || '0';
+        }
+    </script>
+
+</body>
+</html>
